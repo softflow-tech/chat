@@ -1,0 +1,20 @@
+.directMessages{
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.directMessages:hover{
+    background-color: #ebebeb;
+}
+
+.directMessages__info{
+    margin-left: 15px;
+}
+
+.directMessages h2{
+    font-size: 16px;
+    margin-bottom: 8px;
+}

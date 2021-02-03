@@ -8,6 +8,7 @@ import Chat from "./Chat"
 import Contacts from "./Contacts"
 import Login from './Login'
 import Sidebar from "./Sidebar"
+// import PrivateChat from './PrivateChat'
 
 import '../css/App.css'
 
@@ -26,13 +27,17 @@ function App() {
             <Route path='/rooms/:roomId'>
               <Chat />
             </Route>
+            <Route path='/dm/:dmId'>
+              {/* <PrivateChat /> */}
+            </Route>
             <Route path='/account/:accountId'>
               <Account />
             </Route> 
             <Route path='/contacts'>
               <Contacts />
-            </Route>
+            </Route>            
             <Route path='/'>
+              {/* <Chat /> */}
               <Account />
             </Route>          
           </Switch>

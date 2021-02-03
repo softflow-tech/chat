@@ -11,11 +11,15 @@ import db from '../firebase'
 
 export default function Login(){
     const createUser = (uid,email, displayName, photoURL) => {
-        db.collection('users').doc(uid).set({
+        db.collection('users').doc(uid).add({
             email: email,
             displayName: displayName,
             photoURL: photoURL,
-        })
+        }).then(() => {
+            console.log("Document successfully written!");
+        }).catch((error) => {
+            console.error("Error writing document: ", error);
+        });
     };
 
     const [{} , dispatch ]  = useStateValue();

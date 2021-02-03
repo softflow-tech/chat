@@ -54,14 +54,14 @@
 }
 .contactCard h2{
     color: black;
-    margin: 0;
-    padding: 0;
-    margin-left: 20%;
 }
 
-.contacts__info{
+.contactCard__info{
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 2vw;
+    width: 100%;
+    height: auto;
+    text-align: left;
 }
 
 .find{
