@@ -39,19 +39,19 @@ export default function Chat(){
                     <p>Last seen</p>
                 </div>
                 <div className='chat__headerRight'>
-                    <IconButton>
+                    {/* <IconButton>
                         <SearchOutlinedIcon />
-                    </IconButton> 
+                    </IconButton> */}
                     <IconButton>
                         <AttachFileIcon />
-                    </IconButton> 
+                    </IconButton>  
                     <IconButton>
                         <MoreVertIcon />
                     </IconButton> 
                 </div>
             </div>
             <div className='chat__body'>
-                {messages.map(message => (
+                {/* {messages.map(message => (
                     <p className={`chat__message ${false && 'chat__receiver'}`}>
                         <span className='chat__name'>
                             {message.name}
@@ -61,7 +61,7 @@ export default function Chat(){
                             3:50PM
                         </span>
                     </p>
-                ))}
+                ))} */}
             </div>   
             <div className='chat__footer'>
                 <InsertEmoticonIcon />

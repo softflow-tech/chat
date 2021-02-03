@@ -5,10 +5,11 @@
 }
 
 .sidebar__header {
+    height: 10% ;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-right: 1px solid lightgray;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.267);
 }
 
 .sidebar__headerRight{
@@ -53,6 +54,6 @@
 
 .sidebar__chats{
     flex: 1;
-    overflow: hidden;
+    overflow: auto;
     background-color: white;
 }
