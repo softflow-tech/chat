@@ -34,6 +34,11 @@
     margin: 2%;
     background-color: white;
     box-shadow: 1px 1px 5px lightgray;
+    border-radius: 5px;
+}
+
+.contactCard:hover{
+    background-color: rgba(176, 196, 222, 0.137);
 }
 
 .contactCard a{
@@ -62,6 +67,10 @@
 .find{
     padding: 0;
     margin: 7% 5% !important;
+}
+
+.find:hover{
+    cursor: pointer;
 }
 
 .find > .MuiSvgIcon-root{

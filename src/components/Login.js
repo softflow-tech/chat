@@ -11,15 +11,11 @@ import db from '../firebase'
 
 export default function Login(){
     const createUser = (uid,email, displayName, photoURL) => {
-        if (db.collection('users').doc(uid)){
-            console.log('user exists');
-        }else{
-            db.collection('users').doc(uid).set({
-                email: email,
-                displayName: displayName,
-                photoURL: photoURL,
-            })
-        }
+        db.collection('users').doc(uid).set({
+            email: email,
+            displayName: displayName,
+            photoURL: photoURL,
+        })
     };
 
     const [{} , dispatch ]  = useStateValue();
@@ -32,7 +28,9 @@ export default function Login(){
                     type: actionTypes.SET_USER,
                     user: result.user,
                 });
-                createUser(result.user.uid,result.user.email, result.user.displayName, result.user.photoURL)
+                if (db.collection('users').doc(result.user.uid) == null || db.collection('users').doc(result.user.uid) == undefined){
+                    createUser(result.user.uid,result.user.email, result.user.displayName, result.user.photoURL)
+                }
 
             })
             .catch((error) => alert(error.message));

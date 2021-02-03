@@ -10,6 +10,14 @@ export default function Account() {
     const [{user}, dispatch ] = useStateValue();
     const [ userDetails , setUserDetails ] = useState("");
 
+    const formHandler = () =>{
+        db.collection('users').doc(user.uid).set({
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+        })
+    }
+
     return(
         <div className='account'>
             <div className='account__header'>
