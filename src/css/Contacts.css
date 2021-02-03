@@ -7,8 +7,15 @@
 }
 
 .contacts__header{
-    text-align: center;
+    text-align: left;
     flex: 0.1;
+    background-color: lightsteelblue;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.267);
+}
+
+.contacts__header h1{
+    margin: 3% 0 0 5%;
+    text-shadow: 1px 1px gray;
 }
 
 .contacts__cards{
