@@ -61,6 +61,15 @@
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff !important;
     width: auto;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5 !important;
     text-align: auto;
+}
+
+.sidebar__chats a{
+    color: black;
+}
+
+.sidebar__chats a:hover{
+    text-decoration: none;
+    color: black;
 }

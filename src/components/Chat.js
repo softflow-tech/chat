@@ -3,9 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Avatar , IconButton } from "@material-ui/core";
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
-import MicIcon from '@material-ui/icons/Mic';
+import SendIcon from '@material-ui/icons/Send';
 
 import db , {firebaseApp} from '../firebase'
 import firebase from 'firebase'
@@ -94,12 +92,10 @@ export default function Chat(){
                 <span ref={dummy}></span>
             </div>   
             <div className='chat__footer'>
-                <InsertEmoticonIcon />
                 <form>
                     <input value={formValue} onChange={(e)=>setFormValue(e.target.value)} type='text' placeholder='Type a message' />
-                    <button type='submit' onClick={sendMessage}>Send a message</button>
+                    <button type='submit' onClick={sendMessage}><SendIcon /></button>
                 </form>
-                <MicIcon />
             </div>
         </div>
     );

@@ -22,7 +22,7 @@ export default function DirectMessages({id, name, addNewChat}) {
         }
     },[users]);
     return(
-        // < Link to={`/dm/${id}`}>
+        < Link to={`/dm/${id}`}>
             <div  className='directMessages'> 
                 <Avatar />
                 <div className='directMessages__info'>
@@ -30,6 +30,6 @@ export default function DirectMessages({id, name, addNewChat}) {
                     <p>DIRECT MESSAGES</p>
                 </div>
             </div>
-        // </Link>
+        </Link>
     )
 }
