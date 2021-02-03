@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
 import { Link } from 'react-router-dom'
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import db from '../firebase'
 import '../css/Contacts.css'
 
@@ -27,7 +28,8 @@ export default function ContactsCard({id, name, addNewContact}) {
         </div>
     ) : (
        <div onClick={createChat} className='contactCard'>
-           <h2>Find Friends</h2>
+           <h2 className='find'><PersonAddIcon /> Find Friends</h2>
+           
        </div> 
     )
 }
